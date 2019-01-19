@@ -6,5 +6,12 @@ def index(request):
     #return HttpResponse('Hello World')
     return render(request, 'index.html')
 
+def video_player(request):
+    return render(request, 'video_player.html')
+
 def login(request):
-	return render(request, 'login.html')
+    return render(request, 'login.html')
+
+def register(request):
+    return render(request, 'register.html')
+
