@@ -12,3 +12,8 @@ Sam: Sr. Software Enginner <br/>
 Jeremiah: Software Enginner <br/>
 Anna: Software Enginner <br/>
 Noah: Jr. Software Enginner <br/>
+
+
+*.html file in /templates
+add path in video/urls.py
+function in views.py
