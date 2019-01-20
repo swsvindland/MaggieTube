@@ -1,0 +1,13 @@
+.index_title {
+	display: block;
+	text-align: center;
+	color: #36454f;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+
+}
+

@@ -3,6 +3,7 @@
 <html>
 <head>
 	<title>Recent Videos</title>
+	<link rel="stylesheet" href="{% static 'styles/recentvideos.css' %}">
 </head>
 <body>
 	<div>
@@ -14,18 +15,18 @@
 		<button id="recentvideos" class="nav-image">Recent Videos</button><br>
 	</div>
 	<div>
-		<center><h1> Recent Videos </h1></center>
-		<p> A Vast Land With Body Of Water </p>
+		<center><h1 class="rv_title"> Recent Videos </h1></center>
+		<p class="video_title"> A Vast Land With Body Of Water </p>
 		<video 
 	        class="video" width="400" height="250" controls
 	        src="{% static 'assets/channels/MaggieTube/body_of_water/video.mp4' %}">
 	    </video>
-		<p> Time Lapse Video Of Clouds </p>
+		<p class="video_title"> Time Lapse Video Of Clouds </p>
 		<video 
 	        class="video" width="400" height="250" controls
 	        src="{% static 'assets/channels/MaggieTube/clouds/video.mp4' %}">
 	    </video>
-		<p> Girl Sitting on Beach </p>
+		<p class="video_title"> Girl Sitting on Beach </p>
 		<video 
 	        class="video" width="400" height="250" controls
 	        src="{% static 'assets/channels/MaggieTube/girl_on_beach/video.mp4' %}">
