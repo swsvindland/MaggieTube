@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/videoplayer.css' %}">
     <title>Video Player</title>
 </head>
 <body>
@@ -17,17 +18,20 @@
         <button id="recentvideos" class="nav-image">Recent Videos</button><br>
     </div>
     <div>
-        <video 
-            width="320" height="240" controls
-            id="player"
-            type="video/mp4">
-            Your browser does not support this video tag.
-        </video>
-        <br/>
-        <br/>
-        <button>Subscribe</button>
-        <button>Report Video</button>
-        <p>Comments are disabled on this video</p>
+        <center>
+            <h1 id="video_title"> </h1>
+            <video 
+                width="400" height="250" controls
+                id="player"
+                type="video/mp4">
+                Your browser does not support this video tag.
+            </video>
+            <br/>
+            <br/>
+            <button>Subscribe</button>
+            <button>Report Video</button>
+            <p class="comments">Comments are disabled on this video.</p>
+        </center>
     </div>
 </body>
 <footer>
@@ -51,7 +55,6 @@
             l.push(element.split('='))
         });
         document.getElementById('player').src = "{% static 'assets/channels/'%}" + l[0][1] + '/' + l[1][1] + '/video.mp4';
-
     </script>
 </footer>
 </html>
