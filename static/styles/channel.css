@@ -1,0 +1,14 @@
+.channel_title {
+	display: block;
+	text-align: center;
+}
+
+.video {
+	position: absolute;
+	left: 25%;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto auto;
+}

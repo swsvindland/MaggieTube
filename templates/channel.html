@@ -2,9 +2,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/channel.css' %}">
+    <title>Channel</title>
 </head>
 <body>
-
+	<div>
+		<center>
+			<h1> Water </h1>
+		</center>
+		<video 
+	        class="video" width="400" height="250" controls
+	        src="{% static 'assets/channels/MaggieTube/vlog/video.mp4' %}" type="video/mp4">
+	        Your browser does not support this video tag.
+	    </video>
+	</div>
 </body>
 </html>
