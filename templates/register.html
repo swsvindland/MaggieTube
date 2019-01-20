@@ -5,16 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'styles/register.css' %}">
     <title>Document</title>
 </head>
 <body>
-    <form>
-        First Name: <input type="text" name="fname"><br>
-        Last Name: <input type="text" name="lname"><br>
-        Email: <input type="text" name="email"><br>
-        Password: <input type="text" name="password1"><br>
-        Password: <input type="text" name="password2"><br>
-        <input type="submit" value="Submit">
+    <h1 class="register_title"> Sign Up </h1>
+    <form id="form_login">
+        First Name: <input type="text" name="fname" class="detail"><br>
+        Last Name: <input type="text" name="lname" class="detail"><br>
+        Email: <input type="text" name="email" class="detail"><br>
+        Password: <input type="text" name="password1" class="detail"><br>
+        Password: <input type="text" name="password2" class="detail"><br>
+        <input type="button" onclick="location.href='/video/login';" value="Submit">
     </form>
 </body>
 </html>

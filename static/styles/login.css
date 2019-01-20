@@ -1,0 +1,19 @@
+.vertical_center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 42%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.login_title {
+	display: block;
+	text-align: center;
+}
+
+#form_login {
+	margin-left: auto;
+    margin-right: auto;
+    width: 11em
+}
