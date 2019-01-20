@@ -1,0 +1,14 @@
+.detail {
+	margin-bottom:10px;
+}
+
+#form_login {
+	margin-left: auto;
+    margin-right: auto;
+    width: 11em
+}
+
+.register_title {
+	display: block;
+	text-align: center;
+}
