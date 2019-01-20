@@ -28,9 +28,4 @@ def favoritecreators(request):
 def recentvideos(request):
 	return render(request, 'recentvideos.html')
 
-def Results(request):
-    if request.method == "POST":
-    	return render(request, 'videoplayer.html', context=request.POST.get("imgid", None))
-    else:
-    	print("yadoodled")
 

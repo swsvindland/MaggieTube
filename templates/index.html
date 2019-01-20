@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=\, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
 </head>
@@ -20,28 +20,29 @@
 	<h2>Creaters of the Day</h2>
 	<img 
 		width="320" height="240"
-		src="{% static "assets/channels/MaggieTube/body_of_water/thumbnail.png" %}" alt="thumbnail" class="thumbnail" id="img00">
+		id="video0"
+		src="{% static "assets/channels/MaggieTube/body_of_water/thumbnail.png" %}" alt="thumbnail">
 	<img 
 		width="320" height="240"
-		src="{% static "assets/channels/MaggieTube/clouds/thumbnail.png" %}" alt="thumbnail" class="thumbnail" id="img01">
+		id="video1"
+		src="{% static "assets/channels/MaggieTube/clouds/thumbnail.png" %}" alt="thumbnail">
 	<img 
 		width="320" height="240"
-		src="{% static "assets/channels/MaggieTube/flowers/thumbnail.png" %}" alt="thumbnail" class="thumbnail" id="img02">
+		id="video2"
+		src="{% static "assets/channels/MaggieTube/flowers/thumbnail.png" %}" alt="thumbnail">
 	<img 
 		width="320" height="240"
-		src="{% static "assets/channels/MaggieTube/girl_on_beach/thumbnail.png" %}" alt="thumbnail" class="thumbnail" id="img03">
+		id="video3"
+		src="{% static "assets/channels/MaggieTube/girl_on_beach/thumbnail.png" %}" alt="thumbnail">
 	<img 
 		width="320" height="240"
-		src="{% static "assets/channels/MaggieTube/man_dance_street/thumbnail.png" %}" alt="thumbnail" class="thumbnail" id="img04">
+		id="video4"
+		src="{% static "assets/channels/MaggieTube/man_dance_street/thumbnail.png" %}" alt="thumbnail" >
 	<img 
 		width="320" height="240"
-		src="{% static "assets/channels/MaggieTube/ocean_cliff/thumbnail.png" %}" alt="thumbnail" class="thumbnail" id="img05">
-	<div>
-		<form id="leform" action="/results" method="POST">
-			{% csrf_token %}
-    		<input type="hidden" name="imgid" value=""/>
-		</form>
-	</div>
+		id="video5"
+		src="{% static "assets/channels/MaggieTube/ocean_cliff/thumbnail.png" %}" alt="thumbnail">
+
 </body>
 <footer>
 	<script type="text/javascript" src="{% static 'scripts/index.js' %}"></script>
@@ -58,13 +59,25 @@
 		document.getElementById("recentvideos").onclick = function(){
 			document.location.href = "recentvideos";
 		}
-
-		var list = document.getElementsByClassName("thumbnail")
-		for(let item in list){
-			list[item].onclick = function(e){
-				document.getElementById("leform")["imgid"].value = e.srcElement.id;
-			}
+		document.getElementById('video0').onclick = function() {
+			document.location.href = "videoplayer?channel=MaggieTube&video=body_of_water"
 		}
+		document.getElementById('video1').onclick = function() {
+			document.location.href = "videoplayer?channel=MaggieTube&video=clouds"
+		}
+		document.getElementById('video2').onclick = function() {
+			document.location.href = "videoplayer?channel=MaggieTube&video=flowers"
+		}
+		document.getElementById('video3').onclick = function() {
+			document.location.href = "videoplayer?channel=MaggieTube&video=girl_on_beach"
+		}
+		document.getElementById('video4').onclick = function() {
+			document.location.href = "videoplayer?channel=MaggieTube&video=man_dance_street"
+		}
+		document.getElementById('video5').onclick = function() {
+			document.location.href = "videoplayer?channel=MaggieTube&video=ocean_cliff"
+		}
+
 
 	</script>
 </footer>
