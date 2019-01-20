@@ -107,3 +107,5 @@ venv.bak/
 
 # videos
 *.mp4
+
+.DS_Store
