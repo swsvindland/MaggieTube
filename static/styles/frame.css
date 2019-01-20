@@ -19,3 +19,17 @@
 	width: 75px;
 	margin: 25px;
 }
+
+/***************************/
+.search-bar{grid-area: B;}
+.nav-barP
+.grid-container{
+	display: grid;
+	grid-template-areas: 
+		'A B B B B B'
+		'A C C C C C'
+		'A C C C C C'
+		'A C C C C C'
+		'A C C C C C';
+	grid-gap: 20px;
+}
