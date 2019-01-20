@@ -19,7 +19,8 @@
     <div>
         <video 
             width="320" height="240" controls
-            src="{% static 'assets/channels/MaggieTube/vlog/video.mp4' %}" type="video/mp4">
+            id="player"
+            type="video/mp4">
             Your browser does not support this video tag.
         </video>
         <br/>
@@ -30,7 +31,7 @@
     </div>
 </body>
 <footer>
-    <script type="text/javascript" src="{% static 'scripts/video_player.js' %}"></script>
+    <script type="text/javascript" src="{% static 'scripts/videoplayer.js' %}"></script>
     <script type="text/javascript">
         document.getElementById("channel").onclick = function(){
             document.location.href = "channel";
@@ -44,6 +45,13 @@
         document.getElementById("recentvideos").onclick = function(){
             document.location.href = "recentvideos";
         }
+        let foo = window.location.search.split('&')
+        let l = []
+        foo.forEach(element => {
+            l.push(element.split('='))
+        });
+        document.getElementById('player').src = "{% static 'assets/channels/'%}" + l[0][1] + '/' + l[1][1] + '/video.mp4';
+
     </script>
 </footer>
 </html>
