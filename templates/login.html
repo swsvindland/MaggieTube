@@ -5,13 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'styles/login.css' %}">
     <title>Document</title>
 </head>
-<body>
-    <form>
-        Email: <input type="text" name="email"><br>
-        Password: <input type="text" name="password"><br>
-        <input type="submit" value="Submit">
-    </form>
+<body >
+    <h1 class="login_title"> Login </h1>
+    <div class="vertical_center">
+        <center>
+            <form id="form_login">
+                Email: <input type="text" name="email"><br>
+                Password: <input type="password" name="password"><br>
+                <input type="button" onclick="location.href='/video/frame';" value="submit" />
+            </form>
+        </center>
+    </div>
 </body>
 </html>
