@@ -20,22 +20,28 @@
 	<h2>Creaters of the Day</h2>
 	<img 
 		width="320" height="240"
-		src="{% static "assets/channels/MaggieTube/body_of_water/thumbnail.png" %}" alt="thumbnail">
+		src="{% static "assets/channels/MaggieTube/body_of_water/thumbnail.png" %}" alt="thumbnail" class="thumbnail" id="img00">
 	<img 
 		width="320" height="240"
-		src="{% static "assets/channels/MaggieTube/clouds/thumbnail.png" %}" alt="thumbnail">
+		src="{% static "assets/channels/MaggieTube/clouds/thumbnail.png" %}" alt="thumbnail" class="thumbnail" id="img01">
 	<img 
 		width="320" height="240"
-		src="{% static "assets/channels/MaggieTube/flowers/thumbnail.png" %}" alt="thumbnail">
+		src="{% static "assets/channels/MaggieTube/flowers/thumbnail.png" %}" alt="thumbnail" class="thumbnail" id="img02">
 	<img 
 		width="320" height="240"
-		src="{% static "assets/channels/MaggieTube/girl_on_beach/thumbnail.png" %}" alt="thumbnail">
+		src="{% static "assets/channels/MaggieTube/girl_on_beach/thumbnail.png" %}" alt="thumbnail" class="thumbnail" id="img03">
 	<img 
 		width="320" height="240"
-		src="{% static "assets/channels/MaggieTube/man_dance_street/thumbnail.png" %}" alt="thumbnail">
+		src="{% static "assets/channels/MaggieTube/man_dance_street/thumbnail.png" %}" alt="thumbnail" class="thumbnail" id="img04">
 	<img 
 		width="320" height="240"
-		src="{% static "assets/channels/MaggieTube/ocean_cliff/thumbnail.png" %}" alt="thumbnail">
+		src="{% static "assets/channels/MaggieTube/ocean_cliff/thumbnail.png" %}" alt="thumbnail" class="thumbnail" id="img05">
+	<div>
+		<form id="leform" action="/results" method="POST">
+			{% csrf_token %}
+    		<input type="hidden" name="imgid" value=""/>
+		</form>
+	</div>
 </body>
 <footer>
 	<script type="text/javascript" src="{% static 'scripts/index.js' %}"></script>
@@ -52,6 +58,14 @@
 		document.getElementById("recentvideos").onclick = function(){
 			document.location.href = "recentvideos";
 		}
+
+		var list = document.getElementsByClassName("thumbnail")
+		for(let item in list){
+			list[item].onclick = function(e){
+				document.getElementById("leform")["imgid"].value = e.srcElement.id;
+			}
+		}
+
 	</script>
 </footer>
 </html>
