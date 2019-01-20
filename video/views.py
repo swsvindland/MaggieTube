@@ -10,8 +10,8 @@ def frame(request):
     #return HttpResponse('Hello World')
     return render(request, 'frame.html')
 
-def video_player(request):
-    return render(request, 'video_player.html')
+def videoplayer(request):
+    return render(request, 'videoplayer.html')
 
 def login(request):
     return render(request, 'login.html')
@@ -21,3 +21,10 @@ def register(request):
 
 def channel(request):
 	return render(request, 'channel.html')
+
+def favoritecreators(request):
+	return render(request, 'favoritecreators.html')
+
+def recentvideos(request):
+	return render(request, 'recentvideos.html')
+
