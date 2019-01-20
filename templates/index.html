@@ -8,9 +8,36 @@
 	<title>Document</title>
 </head>
 <body>
+	<div>
+		<input type="text" name="search" id="search">
+		<button id="submit">Search</button><br>
+		<button id="channel" class="nav-image">Channel</button><br>
+		<button id="home" class="nav-image">Home</button><br>
+		<button id="favoritecreators" class="nav-image">Favorite Creators</button><br>
+		<button id="recentvideos" class="nav-image">Recent Videos</button><br>
+	</div>
+	<div>
 	<h2>Creaters of the Day</h2>
-	<img 
-		width="320" height="240"
-		src="{% static "assets/channels/MaggieTube/vlog/thumbnail.png" %}" alt="thumbnail">
+		<img 
+			width="320" height="240"
+			src="{% static "assets/channels/MaggieTube/vlog/thumbnail.png" %}" alt="thumbnail">
+	</div>
 </body>
+<footer>
+	<script type="text/javascript" src="{% static 'scripts/index.js' %}"></script>
+	<script type="text/javascript">
+		document.getElementById("channel").onclick = function(){
+			document.location.href = "channel";
+		}
+		document.getElementById("home").onclick = function(){
+			document.location.href = "../video";
+		}
+		document.getElementById("favoritecreators").onclick = function(){
+			document.location.href = "favoritecreators";
+		}
+		document.getElementById("recentvideos").onclick = function(){
+			document.location.href = "recentvideos";
+		}
+	</script>
+</footer>
 </html>
