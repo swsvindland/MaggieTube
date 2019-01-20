@@ -5,10 +5,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
+	<link rel="stylesheet" href="{% static 'styles/index.css' %}">
+	<title>Home</title>
 </head>
 <body>
-	<div>
+	<div class="frame_container">
 		<input type="text" name="search" id="search">
 		<button id="submit">Search</button><br>
 		<button id="channel" class="nav-image">Channel</button><br>
@@ -17,32 +18,45 @@
 		<button id="recentvideos" class="nav-image">Recent Videos</button><br>
 	</div>
 	<div>
-	<h2>Creaters of the Day</h2>
-	<img 
-		width="320" height="240"
-		id="video0"
-		src="{% static "assets/channels/MaggieTube/bookreviewlotr/thumbnail.png" %}" alt="thumbnail">
-	<img 
-		width="320" height="240"
-		id="video1"
-		src="{% static "assets/channels/MaggieTube/cocoatoot/thumbnail.png" %}" alt="thumbnail">
-	<img 
-		width="320" height="240"
-		id="video2"
-		src="{% static "assets/channels/MaggieTube/hyperfrump/thumbnail.png" %}" alt="thumbnail">
-	<img 
-		width="320" height="240"
-		id="video3"
-		src="{% static "assets/channels/MaggieTube/mimiroseradio/thumbnail.png" %}" alt="thumbnail">
-	<img 
-		width="320" height="240"
-		id="video4"
-		src="{% static "assets/channels/MaggieTube/sciencefantasyfinal/thumbnail.png" %}" alt="thumbnail" >
-	<img 
-		width="320" height="240"
-		id="video5"
-		src="{% static "assets/channels/MaggieTube/vlogtest/thumbnail.png" %}" alt="thumbnail">
-
+	<h2>Videos of the Day</h2>
+	<div class="grid-container">
+		<div class="grid-item">
+			<img 
+				width="320" height="240"
+				id="video0"
+				src="{% static "assets/channels/MaggieTube/bookreviewlotr/thumbnail.png" %}" alt="thumbnail">
+		</div>
+		<div class="grid-item">
+			<img 
+				width="320" height="240"
+				id="video1"
+				src="{% static "assets/channels/MaggieTube/cocoatoot/thumbnail.png" %}" alt="thumbnail">
+		</div>
+		<div class="grid-item">
+			<img 
+				width="320" height="240"
+				id="video2"
+				src="{% static "assets/channels/MaggieTube/hyperfrump/thumbnail.png" %}" alt="thumbnail">
+		</div>
+		<div class="grid-item">
+			<img 
+				width="320" height="240"
+				id="video3"
+				src="{% static "assets/channels/MaggieTube/mimiroseradio/thumbnail.png" %}" alt="thumbnail">
+		</div>
+		<div class="grid-item">
+			<img 
+				width="320" height="240"
+				id="video4"
+				src="{% static "assets/channels/MaggieTube/sciencefantasyfinal/thumbnail.png" %}" alt="thumbnail" >
+		</div>
+		<div class="grid-item">
+			<img 
+				width="320" height="240"
+				id="video5"
+				src="{% static "assets/channels/MaggieTube/vlogtest/thumbnail.png" %}" alt="thumbnail">
+		</div>
+	</div>
 </body>
 <footer>
 	<script type="text/javascript" src="{% static 'scripts/index.js' %}"></script>

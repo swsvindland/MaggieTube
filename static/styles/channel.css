@@ -1,14 +1,8 @@
+.video_title {
+	color: #36454f;
+}
+
 .channel_title {
-	display: block;
-	text-align: center;
+	color: #36454f;
 }
 
-.video {
-	position: absolute;
-	left: 25%;
-}
-
-.grid-container {
-	display: grid;
-	grid-template-columns: auto auto auto;
-}

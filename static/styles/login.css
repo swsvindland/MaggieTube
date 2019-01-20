@@ -10,10 +10,13 @@
 .login_title {
 	display: block;
 	text-align: center;
+  color: #36454f;
 }
 
 #form_login {
 	margin-left: auto;
-    margin-right: auto;
-    width: 11em
+  margin-right: auto;
+  width: 11em;
 }
+
+
