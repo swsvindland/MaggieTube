@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/frame.css' %}">
+    <title>Frame</title>
+</head>
+<body>
+	<div>
+		<img src="{% static 'images/person.png' %}" id="avatar" class="nav-image"><br>
+		<img src="{% static 'images/home.png' %}" id="home" class="nav-image"><br>
+		<img src="{% static 'images/creator.png' %}" id="person" class="nav-image"><br>
+		<img src="{% static 'images/video.png' %}" id="video" class="nav-image"><br>
+	</div>
+	<div>
+		<input type="text" name="search" id="search">
+		<button id="submit">Search</button>
+	</div>
+</body>
+</html>
